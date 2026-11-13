@@ -1,0 +1,55 @@
+# --- Build Rust ---
+/target/
+**/*.rs.bk
+*.pdb
+
+# Nota: Cargo.lock va versionato (progetto binario: build riproducibili).
+
+# --- Dati locali ---
+# csvmask lavora su file che possono contenere dati personali: nessun file di dati
+# entra nel repo, né in input né in output.
+*.csv
+*.tsv
+*.txt
+*.dat
+*.out
+*.masked
+*.xlsx
+*.xls
+*.json
+*.parquet
+*.gz
+*.zip
+*.bz2
+*.xz
+*.zst
+# Eccezioni: file di licenza e fixture di test sintetiche (mai dati reali).
+!/LICENSE.txt
+!/tests/fixtures/**
+
+# --- Profiling e benchmark ---
+perf.data*
+flamegraph*.svg
+*.profraw
+*.profdata
+/criterion/
+
+# --- Editor e IDE ---
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+.#*
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+
+# --- Segreti e configurazioni locali ---
+.env
+.env.*
+
+# --- Strumenti locali ---
+.claude/settings.local.json

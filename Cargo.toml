@@ -1,0 +1,13 @@
+[package]
+name = "csvmask"
+version = "0.1.0"
+edition = "2024"
+description = "High-performance CSV column masking CLI tool"
+license = "BSD-3-Clause"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
